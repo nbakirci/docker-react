@@ -6,4 +6,4 @@ before_install:
   - docker build -t naregb/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run naregb/docker-react npm run test -- --coverage
+  - docker run -e CI=true naregb/docker-react npm run test -- --coverage
